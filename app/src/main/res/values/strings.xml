@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">יוטיוב אופליין מקומי</string>
+    <string name="home">בית</string>
+    <string name="explore">מנויים</string>
+    <string name="subscriptions">ערוצים</string>
+    <string name="library">ספרייה</string>
+    <string name="settings">הגדרות</string>
+    <string name="search_hint">חיפוש סרטונים מקומיים...</string>
+    <string name="recommended_for_you">מומלץ עבורך (באופליין)</string>
+    <string name="history">היסטוריית צפייה</string>
+    <string name="playlists">פלייליסטים</string>
+    <string name="ai_subtitles">מודל כתוביות AI (עברית/אנגלית)</string>
+    <string name="import_model">ייבא מודל AI מהמכשיר</string>
+    <string name="use_built_in_model">השתמש במודל המובנה</string>
+    <string name="pip_mode">חלון צף (PiP)</string>
+    <string name="about_creator">אודות המפתח</string>
+    <string name="creator_name">פותח על ידי ספרדי גאה</string>
+    <string name="play_video">נגן סרטון</string>
+    <string name="subtitles_on">כתוביות פעילות</string>
+    <string name="subtitles_off">ללא כתוביות</string>
+    <string name="translate_sub">תרגם כתוביות לאנגלית/עברית</string>
+</resources>
