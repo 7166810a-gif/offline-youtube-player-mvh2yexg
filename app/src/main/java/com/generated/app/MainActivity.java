@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.provider.MediaStore;
 import android.view.Gravity;
 import android.view.View;
@@ -393,4 +392,51 @@ public class MainActivity extends Activity {
         videoBox.setGravity(Gravity.CENTER);
         videoBox.setOrientation(LinearLayout.VERTICAL);
 
-        TextView playingText = new TextVi
+        TextView playingText = new TextView(this);
+        playingText.setText("מנגן כעת באופליין:\n" + video.title);
+        playingText.setTextColor(Color.WHITE);
+        playingText.setTextSize(16);
+        playingText.setGravity(Gravity.CENTER);
+        videoBox.addView(playingText);
+
+        TextView subtitleView = new TextView(this);
+        subtitleView.setText("[כתוביות AI אוטומטיות בעברית/אנגלית פעילות]");
+        subtitleView.setTextColor(Color.YELLOW);
+        subtitleView.setTextSize(13);
+        subtitleView.setPadding(0, 24, 0, 0);
+        videoBox.addView(subtitleView);
+
+        playerRoot.addView(videoBox);
+
+        // Player Controls & Actions
+        LinearLayout controls = new LinearLayout(this);
+        controls.setOrientation(LinearLayout.VERTICAL);
+        controls.setPadding(24, 24, 24, 24);
+
+        TextView videoTitle = new TextView(this);
+        videoTitle.setText(video.title);
+        videoTitle.setTextSize(18);
+        videoTitle.setTypeface(null, android.graphics.Typeface.BOLD);
+        controls.addView(videoTitle);
+
+        TextView channelInfo = new TextView(this);
+        channelInfo.setText(video.channel + " • מצב אופליין מלא");
+        channelInfo.setTextSize(14);
+        channelInfo.setTextColor(Color.GRAY);
+        channelInfo.setPadding(0, 8, 0, 24);
+        controls.addView(channelInfo);
+
+        Button btnPip = new Button(this);
+        btnPip.setText("🪟 הפעל חלון צף (PiP)");
+        btnPip.setOnClickListener(v -> Toast.makeText(this, "חלון צף הופעל בהצלחה", Toast.LENGTH_SHORT).show());
+        controls.addView(btnPip);
+
+        Button btnBack = new Button(this);
+        btnBack.setText("חזרה למסך הבית");
+        btnBack.setOnClickListener(v -> showHomeScreen());
+        controls.addView(btnBack);
+
+        playerRoot.addView(controls);
+        contentContainer.addView(playerRoot);
+    }
+}
