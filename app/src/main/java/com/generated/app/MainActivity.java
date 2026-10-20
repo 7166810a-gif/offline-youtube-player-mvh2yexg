@@ -301,7 +301,7 @@ public class MainActivity extends Activity {
         TextView tvDesc = new TextView(this);
         tvDesc.setText("אפליקציית יוטיוב אופליין מלאה הכוללת מודל AI מקומי לכתוביות בעברית ובאנגלית, חלון צף וניגון חכם ללא שום תלות ברשת.");
         tvDesc.setTextSize(14);
-        tvDesc.setTextColor(Color.DARKGRAY);
+        tvDesc.setTextColor(Color.parseColor("#404040"));
         tvDesc.setGravity(Gravity.CENTER);
         tvDesc.setPadding(0, 16, 0, 0);
         layout.addView(tvDesc);
